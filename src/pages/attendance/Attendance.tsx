@@ -1,8 +1,12 @@
+import UnderConstruction from "../../components/inDevelop"
+
 
 
 const Attendance = () => {
   return (
-    <div>Attendance</div>
+    <div>
+      <UnderConstruction />
+    </div>
   )
 }
 

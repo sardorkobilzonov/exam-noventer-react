@@ -1,8 +1,11 @@
+import UnderConstruction from "../../components/inDevelop"
 
 
 const Report = () => {
   return (
-    <div>Report</div>
+    <div>
+      <UnderConstruction />
+    </div>
   )
 }
 
