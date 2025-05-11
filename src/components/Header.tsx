@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { BiSearch } from "react-icons/bi";
 import { IoSunnyOutline } from "react-icons/io5";
@@ -8,6 +8,7 @@ import { useProfileQuery } from "../redux/api/auth.api";
 
 const Header = () => {
   const { data } = useProfileQuery({});
+  const navigate = useNavigate();
 
   return (
     <>
@@ -43,6 +44,7 @@ const Header = () => {
               src={data?.avatar}
               alt=""
               className="w-[40px] h-[40px] rounded-full"
+              onClick={() => navigate("/profile")}
             />
           </div>
         </nav>
