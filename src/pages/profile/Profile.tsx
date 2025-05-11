@@ -1,6 +1,8 @@
 import { GoChevronLeft } from "react-icons/go";
 import { useProfileQuery } from "../../redux/api/auth.api";
-import BalanceCard from '../../assets/Balance card.png'
+import BalanceCard from "../../assets/Balance card.png";
+import ProfileCards from "../../components/ProfileCards";
+import ProfileInfo from "../../components/ProfileInfo";
 
 const Profile = () => {
   const { data } = useProfileQuery({});
@@ -37,17 +39,23 @@ const Profile = () => {
 
               <div className="flex flex-col text-white">
                 <h3 className="text-[12px] tracking-[1%]">Xush kelibsiz!</h3>
-                <h1 className="text-[36px] font-bold tracking-[1%]">{data?.full_name ?? "Sheroz Turdiyev"}</h1>
+                <h1 className="text-[36px] font-bold tracking-[1%]">
+                  {data?.full_name ?? "Sheroz Turdiyev"}
+                </h1>
                 <span className="flex items-center justify-center w-[52px] h-[20px] bg-white rounded-[4px] mt-[4px]">
-                  <p className="text-[12px] text-[#334D6E]">{data?.role ?? "Rahbar"}</p>
+                  <p className="text-[12px] text-[#334D6E]">
+                    {data?.role ?? "Rahbar"}
+                  </p>
                 </span>
               </div>
             </div>
-                  <div className="absolute right-[29px] top-[35px]">
-                    <img src={BalanceCard} alt="" />
-                  </div>
+            <div className="absolute right-[29px] top-[35px]">
+              <img src={BalanceCard} alt="" />
+            </div>
           </div>
         </div>
+        <ProfileCards />
+        <ProfileInfo />
       </div>
     </>
   );
