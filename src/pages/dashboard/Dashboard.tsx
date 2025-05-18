@@ -16,18 +16,15 @@ const Dashboard = () => {
               <FiHome />
               Xodimlar ro'yxati
             </NavLink>
-            <NavLink to="attendance" className={linkClass}>
+            <NavLink to="smena" className={linkClass}>
               <FiHome />
-              Xodimlar davomati
+              Smenalar
             </NavLink>
             <NavLink to="clients" className={linkClass}>
               <FiHome />
               Mijozlar
             </NavLink>
-            <NavLink to="report" className={linkClass}>
-              <FiHome />
-              Oylik hisobot
-            </NavLink>
+
           </div>
         </aside>
         <main className="bg-[#F5F7FA] w-full">
